@@ -2,6 +2,8 @@ import streamlit as st
 from functions import get_todos,write_todos
 
 todos = get_todos()
+
+st.set_page_config(layout="wide")
 def add_todo():
     todo_local = st.session_state['new_todo'] + '\n'
     todos.append(todo_local)
